@@ -125,7 +125,7 @@ t = -9.5:9.5; % year vector
 for i = 1:90; % loop through the regressions
     for j = 1:180;  % to get trends, means, & uncertainties
         if N2(i,j)==1;
-        mdl = fitlm(t,squeeze(C2(i,j,:)));
+        mdl = fitlm(t,squeeze(Cm(i,j,:)));
         t2(i,j) = table2array(mdl.Coefficients(2,1));
         m2(i,j) = table2array(mdl.Coefficients(1,1));
         t2u(i,j) = table2array(mdl.Coefficients(2,2));
